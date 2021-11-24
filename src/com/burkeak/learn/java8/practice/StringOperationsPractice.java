@@ -1,5 +1,8 @@
 package com.burkeak.learn.java8.practice;
 
+import java.util.HashSet;
+import java.util.Set;
+
 public class StringOperationsPractice {
     public static void main(String[] args) {
         //compareTo & compareToIgnoreCase
@@ -25,6 +28,14 @@ public class StringOperationsPractice {
         int codeCount = text1.codePointCount(1, 6);
         boolean contain1 = text1.contains("code");
         boolean contain2 = text1.contains("co De");
+
+        char[] ch=text1.toCharArray();
+        int len=text1.length();
+        Set<Character> s = new HashSet<>();
+
+        if(!s.add(ch[0])){
+            System.out.println("duplication is there!");
+        }
 
         System.out.println("ASCII value of 'a' : " + codeAt);
         System.out.println("ASCII value of 'a' : " + codeAtBefore);
