@@ -25,6 +25,7 @@ public class PredicateExample {
 
     public static void predicateNegate(){
         System.out.println(evenNum.or(p).negate().test(9)); //predicating channing
+        System.out.println(evenNum.negate().test(10)); //predicating channing
 
     }
 }
