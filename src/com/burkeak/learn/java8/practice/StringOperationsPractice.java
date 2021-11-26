@@ -6,10 +6,10 @@ import java.util.Set;
 public class StringOperationsPractice {
     public static void main(String[] args) {
         //compareTo & compareToIgnoreCase
-        String text ="AkshAy";
-        int val1=text.compareTo("akshay");
-        int val2=text.compareTo("Akshay");
-        int val3=text.compareToIgnoreCase("aKsHaY");
+        String text = "AkshAy";
+        int val1 = text.compareTo("akshay");
+        int val2 = text.compareTo("Akshay");
+        int val3 = text.compareToIgnoreCase("aKsHaY");
 
         System.out.println(val1);
         System.out.println(val2);
@@ -29,11 +29,11 @@ public class StringOperationsPractice {
         boolean contain1 = text1.contains("code");
         boolean contain2 = text1.contains("co De");
 
-        char[] ch=text1.toCharArray();
-        int len=text1.length();
+        char[] ch = text1.toCharArray();
+        int len = text1.length();
         Set<Character> s = new HashSet<>();
 
-        if(!s.add(ch[0])){
+        if (!s.add(ch[0])) {
             System.out.println("duplication is there!");
         }
 
@@ -48,10 +48,27 @@ public class StringOperationsPractice {
 
         //startsWith() / endsWith()
 
-        String text2="Rutuja";
+        String text2 = "Rutuja";
         System.out.println(text2.startsWith("tuja"));
         System.out.println(text2.startsWith("ru"));
         System.out.println(text2.startsWith("Ru"));
         System.out.println(text2.endsWith("ja"));
+
+        /*
+         * Swap 2 strings without using 3rd variable
+         * */
+        String s2 = "one";
+        String s3 = "two";
+        s2 = s2 + s3;
+        s3 = s2.substring(0, (s2.length() - s3.length()));
+        s2 = s2.substring(s3.length());
+        System.out.println("swap : " + s2 + s3);
+
+        /*
+        * String/StringBuffer/StringBuilder
+        */
+
+        StringBuffer sb= new StringBuffer();
+
     }
 }
