@@ -21,12 +21,7 @@ public class ComparableComparatorExample {
         System.out.println(lapList);
 
         System.out.println("Using Comparator");
-        Collections.sort(lapList, new Comparator<Laptop>() {
-            @Override
-            public int compare(Laptop o1, Laptop o2) {
-                return o1.getPrice() - o2.getPrice();
-            }
-        });
+        lapList.sort(Comparator.comparingInt(Laptop::getPrice));
 
         System.out.println("after sort based on comparator");
         System.out.println(lapList);
